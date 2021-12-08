@@ -18,7 +18,7 @@ data class Student(val name: String?, val birthYear: Int, val subjects: List<Sub
 data class University(val title: String, val students: MutableList<Student>) {
 
     val average
-        get() = students.filter { it.age in 17..20 }.average { it.averageGrade }
+        get() = students.filter { it.age in 20..23 }.average { it.averageGrade }
 
     val courses
         get() = students.groupBy { it.age }.mapKeys {
